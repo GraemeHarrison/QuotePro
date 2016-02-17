@@ -17,10 +17,8 @@
 		2E0A71C91C74ED0700B7F144 /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71C81C74ED0700B7F144 /* QuoteBuilderViewController.swift */; };
 		2E0A71CB1C74EE3400B7F144 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71CA1C74EE3400B7F144 /* QuoteView.swift */; };
 		2E0A71CD1C74EE4F00B7F144 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A71CC1C74EE4F00B7F144 /* QuoteView.xib */; };
-		2E0A71D41C74FDC100B7F144 /* Quote+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71D01C74FDC100B7F144 /* Quote+CoreDataProperties.swift */; };
-		2E0A71D51C74FDC100B7F144 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71D11C74FDC100B7F144 /* Quote.swift */; };
-		2E0A71D61C74FDC100B7F144 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71D21C74FDC100B7F144 /* Photo+CoreDataProperties.swift */; };
-		2E0A71D71C74FDC100B7F144 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71D31C74FDC100B7F144 /* Photo.swift */; };
+		2E0A71D91C7501F600B7F144 /* PhotoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71D81C7501F600B7F144 /* PhotoWebService.swift */; };
+		2E0A71DB1C75020C00B7F144 /* QuoteWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71DA1C75020C00B7F144 /* QuoteWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +34,8 @@
 		2E0A71C81C74ED0700B7F144 /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
 		2E0A71CA1C74EE3400B7F144 /* QuoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		2E0A71CC1C74EE4F00B7F144 /* QuoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
-		2E0A71D01C74FDC100B7F144 /* Quote+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Quote+CoreDataProperties.swift"; path = "../Quote+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2E0A71D11C74FDC100B7F144 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = ../Quote.swift; sourceTree = "<group>"; };
-		2E0A71D21C74FDC100B7F144 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2E0A71D31C74FDC100B7F144 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = ../Photo.swift; sourceTree = "<group>"; };
+		2E0A71D81C7501F600B7F144 /* PhotoWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoWebService.swift; sourceTree = "<group>"; };
+		2E0A71DA1C75020C00B7F144 /* QuoteWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteWebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,15 +69,13 @@
 			isa = PBXGroup;
 			children = (
 				2E0A71B11C74E6C200B7F144 /* AppDelegate.swift */,
+				2E0A71D81C7501F600B7F144 /* PhotoWebService.swift */,
+				2E0A71DA1C75020C00B7F144 /* QuoteWebService.swift */,
 				2E0A71B61C74E6C200B7F144 /* MasterViewController.swift */,
 				2E0A71B81C74E6C200B7F144 /* DetailViewController.swift */,
 				2E0A71C81C74ED0700B7F144 /* QuoteBuilderViewController.swift */,
 				2E0A71CA1C74EE3400B7F144 /* QuoteView.swift */,
 				2E0A71CC1C74EE4F00B7F144 /* QuoteView.xib */,
-				2E0A71D01C74FDC100B7F144 /* Quote+CoreDataProperties.swift */,
-				2E0A71D11C74FDC100B7F144 /* Quote.swift */,
-				2E0A71D21C74FDC100B7F144 /* Photo+CoreDataProperties.swift */,
-				2E0A71D31C74FDC100B7F144 /* Photo.swift */,
 				2E0A71BA1C74E6C200B7F144 /* Main.storyboard */,
 				2E0A71BD1C74E6C200B7F144 /* Assets.xcassets */,
 				2E0A71BF1C74E6C200B7F144 /* LaunchScreen.storyboard */,
@@ -164,14 +158,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E0A71C91C74ED0700B7F144 /* QuoteBuilderViewController.swift in Sources */,
-				2E0A71D41C74FDC100B7F144 /* Quote+CoreDataProperties.swift in Sources */,
+				2E0A71DB1C75020C00B7F144 /* QuoteWebService.swift in Sources */,
 				2E0A71CB1C74EE3400B7F144 /* QuoteView.swift in Sources */,
 				2E0A71B51C74E6C200B7F144 /* QuotePro.xcdatamodeld in Sources */,
-				2E0A71D71C74FDC100B7F144 /* Photo.swift in Sources */,
-				2E0A71D51C74FDC100B7F144 /* Quote.swift in Sources */,
 				2E0A71B21C74E6C200B7F144 /* AppDelegate.swift in Sources */,
-				2E0A71D61C74FDC100B7F144 /* Photo+CoreDataProperties.swift in Sources */,
 				2E0A71B71C74E6C200B7F144 /* MasterViewController.swift in Sources */,
+				2E0A71D91C7501F600B7F144 /* PhotoWebService.swift in Sources */,
 				2E0A71B91C74E6C200B7F144 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +312,7 @@
 				2E0A71C71C74E6C200B7F144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

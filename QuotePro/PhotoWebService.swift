@@ -1,5 +1,5 @@
 //
-//  Quote.swift
+//  PhotoWebService.swift
 //  QuotePro
 //
 //  Created by Graeme Harrison on 2016-02-17.
@@ -7,11 +7,7 @@
 //
 
 import Foundation
-import CoreData
 
-
-class Quote: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+class PhotoWebService {
+    //
 }

@@ -44,6 +44,7 @@ class QuoteWebService {
                         
                         self.quotesArray.append(quoteText)
                         print("quoteText: \(quoteText)")
+                        print("quoteAuthor: \(quoteAuthor)")
                         
                         // Update label or save data, etc.
                         //                        self.performSelectorOnMainThread("updateIPLabel:", withObject: origin, waitUntilDone: false)

@@ -19,6 +19,10 @@
 		2E0A71CD1C74EE4F00B7F144 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A71CC1C74EE4F00B7F144 /* QuoteView.xib */; };
 		2E0A71D91C7501F600B7F144 /* PhotoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71D81C7501F600B7F144 /* PhotoWebService.swift */; };
 		2E0A71DB1C75020C00B7F144 /* QuoteWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A71DA1C75020C00B7F144 /* QuoteWebService.swift */; };
+		2E631DDD1C751D7500CE64CE /* Quote+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631DD91C751D7500CE64CE /* Quote+CoreDataProperties.swift */; };
+		2E631DDE1C751D7500CE64CE /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631DDA1C751D7500CE64CE /* Quote.swift */; };
+		2E631DDF1C751D7500CE64CE /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631DDB1C751D7500CE64CE /* Photo+CoreDataProperties.swift */; };
+		2E631DE01C751D7500CE64CE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631DDC1C751D7500CE64CE /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		2E0A71CC1C74EE4F00B7F144 /* QuoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
 		2E0A71D81C7501F600B7F144 /* PhotoWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoWebService.swift; sourceTree = "<group>"; };
 		2E0A71DA1C75020C00B7F144 /* QuoteWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteWebService.swift; sourceTree = "<group>"; };
+		2E631DD91C751D7500CE64CE /* Quote+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Quote+CoreDataProperties.swift"; path = "../Quote+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2E631DDA1C751D7500CE64CE /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = ../Quote.swift; sourceTree = "<group>"; };
+		2E631DDB1C751D7500CE64CE /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2E631DDC1C751D7500CE64CE /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = ../Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,10 @@
 				2E0A71CA1C74EE3400B7F144 /* QuoteView.swift */,
 				2E0A71CC1C74EE4F00B7F144 /* QuoteView.xib */,
 				2E0A71BA1C74E6C200B7F144 /* Main.storyboard */,
+				2E631DD91C751D7500CE64CE /* Quote+CoreDataProperties.swift */,
+				2E631DDA1C751D7500CE64CE /* Quote.swift */,
+				2E631DDB1C751D7500CE64CE /* Photo+CoreDataProperties.swift */,
+				2E631DDC1C751D7500CE64CE /* Photo.swift */,
 				2E0A71BD1C74E6C200B7F144 /* Assets.xcassets */,
 				2E0A71BF1C74E6C200B7F144 /* LaunchScreen.storyboard */,
 				2E0A71C21C74E6C200B7F144 /* Info.plist */,
@@ -157,13 +169,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E631DE01C751D7500CE64CE /* Photo.swift in Sources */,
 				2E0A71C91C74ED0700B7F144 /* QuoteBuilderViewController.swift in Sources */,
 				2E0A71DB1C75020C00B7F144 /* QuoteWebService.swift in Sources */,
 				2E0A71CB1C74EE3400B7F144 /* QuoteView.swift in Sources */,
 				2E0A71B51C74E6C200B7F144 /* QuotePro.xcdatamodeld in Sources */,
 				2E0A71B21C74E6C200B7F144 /* AppDelegate.swift in Sources */,
 				2E0A71B71C74E6C200B7F144 /* MasterViewController.swift in Sources */,
+				2E631DDD1C751D7500CE64CE /* Quote+CoreDataProperties.swift in Sources */,
 				2E0A71D91C7501F600B7F144 /* PhotoWebService.swift in Sources */,
+				2E631DDF1C751D7500CE64CE /* Photo+CoreDataProperties.swift in Sources */,
+				2E631DDE1C751D7500CE64CE /* Quote.swift in Sources */,
 				2E0A71B91C74E6C200B7F144 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

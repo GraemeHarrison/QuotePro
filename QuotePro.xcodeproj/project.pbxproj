@@ -22,6 +22,7 @@
 		2E631DEB1C7551F700CE64CE /* Quote+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631DE91C7551F700CE64CE /* Quote+CoreDataProperties.swift */; };
 		2E631DEC1C7551F700CE64CE /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631DEA1C7551F700CE64CE /* Quote.swift */; };
 		2E631DEE1C755D6200CE64CE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631DED1C755D6200CE64CE /* DataManager.swift */; };
+		2E631E0E1C766D4500CE64CE /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631E0D1C766D4500CE64CE /* QuoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2E631DE91C7551F700CE64CE /* Quote+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Quote+CoreDataProperties.swift"; path = "../Quote+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2E631DEA1C7551F700CE64CE /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = ../Quote.swift; sourceTree = "<group>"; };
 		2E631DED1C755D6200CE64CE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2E631E0D1C766D4500CE64CE /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				2E0A71B11C74E6C200B7F144 /* AppDelegate.swift */,
 				2E631DED1C755D6200CE64CE /* DataManager.swift */,
 				2E0A71B61C74E6C200B7F144 /* MasterViewController.swift */,
+				2E631E0D1C766D4500CE64CE /* QuoteTableViewCell.swift */,
 				2E0A71C81C74ED0700B7F144 /* QuoteBuilderViewController.swift */,
 				2E0A71B81C74E6C200B7F144 /* DetailViewController.swift */,
 				2E0A71DA1C75020C00B7F144 /* QuoteWebService.swift */,
@@ -174,6 +177,7 @@
 				2E0A71B71C74E6C200B7F144 /* MasterViewController.swift in Sources */,
 				2E631DEB1C7551F700CE64CE /* Quote+CoreDataProperties.swift in Sources */,
 				2E0A71D91C7501F600B7F144 /* PhotoWebService.swift in Sources */,
+				2E631E0E1C766D4500CE64CE /* QuoteTableViewCell.swift in Sources */,
 				2E631DEE1C755D6200CE64CE /* DataManager.swift in Sources */,
 				2E631DEC1C7551F700CE64CE /* Quote.swift in Sources */,
 				2E0A71B91C74E6C200B7F144 /* DetailViewController.swift in Sources */,

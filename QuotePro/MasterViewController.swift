@@ -12,9 +12,9 @@ import CoreData
 class MasterViewController: UITableViewController {
 
     @IBOutlet var addButton: UIBarButtonItem!
+    
     var detailViewController: DetailViewController? = nil
 //    var managedObjectContext: NSManagedObjectContext? = nil
-    
     var objects = [AnyObject]()
 
     override func viewDidLoad() {
@@ -23,28 +23,16 @@ class MasterViewController: UITableViewController {
 //        let appDelegate : AppDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
 //        self.managedObjectContext = appDelegate.managedObjectContext
         
-        // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-//        self.navigationItem.rightBarButtonItem = addButton
-        
-        objects = DataManager.sharedInstance.fetchData()
-        
     }
 
     override func viewWillAppear(animated: Bool) {
+        objects = DataManager.sharedInstance.fetchData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    func insertNewObject(sender: AnyObject) {
-        objects.insert(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
     
     // MARK: - Segues
@@ -70,10 +58,11 @@ return 1
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! QuoteTableViewCell
         
         let object = objects[indexPath.row] as! Quote
-        cell.textLabel!.text = object.description
+        cell.quoteLabel.text = object.quote
+        cell.authorLabel.text = object.author
         return cell
     }
 

@@ -14,26 +14,8 @@ class QuoteView: UIView {
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     
-    
-    func randomNum() {
-        let min = 0
-        let max = 1014
-        let randomInt =  min + Int(arc4random_uniform(UInt32(max - min + 1)))
-        getPics(randomInt)
-    }
-    
-    func getQuotes(){
-        let quoteService = QuoteWebService()
-        quoteService.callAPI { (quote, author) -> Void in
-            
-            self.setLabel(quote!, author: author!)
-        }
-    }
-    
-    func getPics(picNumber: Int){
-        PhotoWebService.sharedLoader.imageForUrl("https://unsplash.it/400/400?image=\(picNumber)", completionHandler:{(image: UIImage?, url: String) in
-            self.imageView.image = image
-        })
+    func setPicture(image: UIImage) {
+        self.imageView.image = image
     }
     
     func setLabel(quote: String, author: String) {

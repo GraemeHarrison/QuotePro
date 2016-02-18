@@ -16,6 +16,6 @@ extension Quote {
 
     @NSManaged var author: String?
     @NSManaged var quote: String?
-    @NSManaged var photo: Photo?
+    @NSManaged var photoURL: String?
 
 }

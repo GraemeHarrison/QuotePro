@@ -8,22 +8,21 @@
 
 import UIKit
 
-protocol QuoteViewProtocol {
-    func setLabel(quote: String, author: String)
-}
 
 class QuoteBuilderViewController: UIViewController {
 
     @IBOutlet var quoteViewContainer: UIView!
     var quoteView = QuoteView()
-    var quoteViewDelegate = QuoteView()
-    
+    var randomNum: Int = 0
+    var globalQuote: String = ""
+    var globalAuthor: String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareView()
-        getQuotes()
-        getPics()
+        getRandomQuote()
+        getRandomPic()
     }
 
     func prepareView() {
@@ -34,23 +33,50 @@ class QuoteBuilderViewController: UIViewController {
     }
     
     @IBAction func newQuoteButton(sender: UIButton) {
-        quoteView.getQuotes()
+        getRandomQuote()
     }
     
     @IBAction func newImageButton(sender: UIButton) {
-        getPics()
+        getRandomPic()
     }
     
-    func getQuotes() {
-//        let quoteService = QuoteWebService()
-//        quoteService.callAPI { (quote, author) -> Void in
-//        self.quoteViewDelegate.setLabel(quote!, author: author!)
-//        }
-        quoteView.getQuotes()
+    @IBAction func saveData(sender: UIButton) {
+        let quoteText = globalQuote
+        let authorText = globalAuthor
+        let pic =  "https://unsplash.it/400/400?image=\(randomNum)"
+        let dataManager = DataManager.sharedInstance
+        dataManager.saveData(quoteText, author: authorText, picURL: pic)
     }
     
-    func getPics() {
-       quoteView.randomNum()
+    func getRandomQuote() {
+        let quoteService = QuoteWebService()
+        quoteService.callAPI { (quote, author) -> Void in
+            self.quoteView.setLabel(quote!, author: author!)
+            self.globalQuote = quote!
+            self.globalAuthor = author!
+        }
+    }
+    
+    func getPresetQuoteAndAuthor(presetQuote: String, presetAuthor: String) {
+        self.quoteView.setLabel(presetQuote, author: presetAuthor)
+    }
+    
+    func getRandomPic() {
+        let min = 0
+        let max = 1014
+        let randomInt =  min + Int(arc4random_uniform(UInt32(max - min + 1)))
+        randomNum = randomInt
+        getPics(randomInt)
+    }
+    
+    func getPicWithNumber(number: Int) {
+        getPics(number)
+    }
+    
+    func getPics(picNumber: Int){
+        PhotoWebService.sharedLoader.imageForUrl("https://unsplash.it/400/400?image=\(picNumber)", completionHandler:{(image: UIImage?, url: String) in
+            self.quoteView.setPicture(image!)
+        })
     }
     
     override func didReceiveMemoryWarning() {

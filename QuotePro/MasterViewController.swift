@@ -13,19 +13,23 @@ class MasterViewController: UITableViewController {
 
     @IBOutlet var addButton: UIBarButtonItem!
     var detailViewController: DetailViewController? = nil
-    var managedObjectContext: NSManagedObjectContext? = nil
+//    var managedObjectContext: NSManagedObjectContext? = nil
     
     var objects = [AnyObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let appDelegate : AppDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
+//        self.managedObjectContext = appDelegate.managedObjectContext
         
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
 //        self.navigationItem.rightBarButtonItem = addButton
+        
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -41,7 +45,7 @@ class MasterViewController: UITableViewController {
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
-
+    
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

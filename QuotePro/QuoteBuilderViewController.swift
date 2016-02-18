@@ -46,6 +46,7 @@ class QuoteBuilderViewController: UIViewController {
         let pic =  "https://unsplash.it/400/400?image=\(randomNum)"
         let dataManager = DataManager.sharedInstance
         dataManager.saveData(quoteText, author: authorText, picURL: pic)
+        navigationController?.popViewControllerAnimated(true)
     }
     
     func getRandomQuote() {
@@ -57,20 +58,12 @@ class QuoteBuilderViewController: UIViewController {
         }
     }
     
-    func getPresetQuoteAndAuthor(presetQuote: String, presetAuthor: String) {
-        self.quoteView.setLabel(presetQuote, author: presetAuthor)
-    }
-    
     func getRandomPic() {
         let min = 0
         let max = 1014
         let randomInt =  min + Int(arc4random_uniform(UInt32(max - min + 1)))
         randomNum = randomInt
         getPics(randomInt)
-    }
-    
-    func getPicWithNumber(number: Int) {
-        getPics(number)
     }
     
     func getPics(picNumber: Int){

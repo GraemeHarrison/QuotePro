@@ -29,6 +29,7 @@ class MasterViewController: UITableViewController {
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
 //        self.navigationItem.rightBarButtonItem = addButton
         
+        objects = DataManager.sharedInstance.fetchData()
         
     }
 
@@ -51,7 +52,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                let object = objects[indexPath.row] as! Quote
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = object
             }
@@ -71,7 +72,7 @@ return 1
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        let object = objects[indexPath.row] as! NSDate
+        let object = objects[indexPath.row] as! Quote
         cell.textLabel!.text = object.description
         return cell
     }

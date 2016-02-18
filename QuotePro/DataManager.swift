@@ -14,6 +14,10 @@ private let instance = DataManager()
 
 class DataManager {
     
+    class var sharedInstance : DataManager {
+        return instance
+    }
+    
     var managedObjectContext: NSManagedObjectContext? = nil
 
     init() {
@@ -30,14 +34,25 @@ class DataManager {
         
         do {
             try self.managedObjectContext!.save()
-            print("The name is: \(quoteObject.quote)")
+            print("The quote is: \(quoteObject.quote)")
             
         } catch {
             print("Unresolved error")
             abort()
         }
     }
-    class var sharedInstance : DataManager {
-        return instance
+    
+    func fetchData() ->[Quote] {
+        let moc = self.managedObjectContext
+        let quoteFetch = NSFetchRequest(entityName: "Quote")
+        
+        do {
+            var quotesArray = [Quote]()
+            quotesArray = try moc!.executeFetchRequest(quoteFetch) as! [Quote]
+            return quotesArray
+            
+        } catch {
+            fatalError("Failed to fetch quotes: \(error)")
+        }
     }
 }

@@ -5,13 +5,13 @@
         <relationship name="quote" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quote" inverseName="photo" inverseEntity="Quote" syncable="YES"/>
     </entity>
     <entity name="Quote" representedClassName=".Quote">
-        <attribute name="personName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="quoteString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quote" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="quote" inverseEntity="Photo" syncable="YES"/>
         <userInfo/>
     </entity>
     <elements>
-        <element name="Quote" positionX="261" positionY="189" width="128" height="90"/>
         <element name="Photo" positionX="261" positionY="207" width="128" height="75"/>
+        <element name="Quote" positionX="261" positionY="189" width="128" height="90"/>
     </elements>
 </model>

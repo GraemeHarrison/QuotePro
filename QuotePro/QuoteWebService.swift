@@ -12,7 +12,7 @@ class QuoteWebService {
     
     var quotesArray = [String]()
     
-    func getQuotes() {
+    func callAPI(completionHandler: (String?, String?) -> Void) {
         
         //MARK: - REST calls
         // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
@@ -39,20 +39,25 @@ class QuoteWebService {
                         
                         // Parse the JSON to get the IP
                         let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                        let quoteText = jsonDictionary["quoteText"] as! String
-                        let quoteAuthor = jsonDictionary["quoteAuthor"] as! String
+                        let quote = jsonDictionary["quoteText"] as! String
+                        let author = jsonDictionary["quoteAuthor"] as! String
                         
-                        self.quotesArray.append(quoteText)
-                        print("quoteText: \(quoteText)")
-                        print("quoteAuthor: \(quoteAuthor)")
+//                        self.quotesArray.append(quoteText)
+                        print("quoteText: \(quote)")
+                        print("quoteAuthor: \(author)")
+//                        print("quotesArray: \(self.quotesArray)")
                         
-                        // Update label or save data, etc.
-                        //                        self.performSelectorOnMainThread("updateIPLabel:", withObject: origin, waitUntilDone: false)
+//                        completionHandler(quote, author)
+                        
+//                         Update label or save data, etc.
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            completionHandler(quote, author)
+                        })
                     }
+                    
                 } catch {
                     print("bad things happened")
                 }
             }).resume()
     }
 }
-

@@ -14,8 +14,8 @@ import CoreData
 
 extension Quote {
 
-    @NSManaged var personName: String?
-    @NSManaged var quoteString: String?
+    @NSManaged var author: String?
+    @NSManaged var quote: String?
     @NSManaged var photo: Photo?
 
 }

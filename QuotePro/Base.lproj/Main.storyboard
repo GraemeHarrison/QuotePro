@@ -156,6 +156,9 @@
                                 <state key="normal" title="New Quote">
                                     <color key="titleColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newQuoteButton:" destination="nvz-2u-NJs" eventType="touchUpInside" id="EGF-i2-cWy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfB-XB-K6m">
                                 <rect key="frame" x="16" y="445" width="288" height="30"/>
@@ -164,6 +167,9 @@
                                 <state key="normal" title="New Image">
                                     <color key="titleColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newImageButton:" destination="nvz-2u-NJs" eventType="touchUpInside" id="3fp-9Y-nNK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTw-Xd-8tB">
                                 <rect key="frame" x="16" y="491" width="288" height="30"/>
@@ -193,7 +199,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aH5-NI-n0A"/>
                     <connections>
-                        <outlet property="quoteView" destination="UTU-vm-iXU" id="ASB-f3-sKK"/>
+                        <outlet property="quoteViewContainer" destination="UTU-vm-iXU" id="jLO-bC-d68"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMI-yi-lfa" userLabel="First Responder" sceneMemberID="firstResponder"/>

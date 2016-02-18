@@ -8,17 +8,51 @@
 
 import UIKit
 
+protocol QuoteViewProtocol {
+    func setLabel(quote: String, author: String)
+}
+
 class QuoteBuilderViewController: UIViewController {
 
-    @IBOutlet var quoteView: UIView!
+    @IBOutlet var quoteViewContainer: UIView!
+    var quoteView = QuoteView()
+    var quoteViewDelegate = QuoteView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let view = NSBundle.mainBundle().loadNibNamed("QuoteView", owner: nil, options: nil).first! as! QuoteView
-        view.frame.size = quoteView.frame.size
-        quoteView.addSubview(view)
+        prepareView()
+        getQuotes()
+        getPics()
     }
 
+    func prepareView() {
+        let view = NSBundle.mainBundle().loadNibNamed("QuoteView", owner: nil, options: nil).first! as! QuoteView
+        view.frame.size = quoteViewContainer.frame.size
+        quoteViewContainer.addSubview(view)
+        quoteView = view
+    }
+    
+    @IBAction func newQuoteButton(sender: UIButton) {
+        quoteView.getQuotes()
+    }
+    
+    @IBAction func newImageButton(sender: UIButton) {
+        getPics()
+    }
+    
+    func getQuotes() {
+//        let quoteService = QuoteWebService()
+//        quoteService.callAPI { (quote, author) -> Void in
+//        self.quoteViewDelegate.setLabel(quote!, author: author!)
+//        }
+        quoteView.getQuotes()
+    }
+    
+    func getPics() {
+       quoteView.randomNum()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

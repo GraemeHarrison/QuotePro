@@ -11,48 +11,45 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2SQ-mq-hCz">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2SQ-mq-hCz">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH4-81-ji4">
-                    <rect key="frame" x="23" y="273" width="554" height="55"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="86" id="6lY-QZ-6La"/>
-                        <constraint firstAttribute="width" constant="554" id="Ivk-wR-3cX"/>
-                        <constraint firstAttribute="height" constant="55" id="UYo-NN-uEp"/>
-                        <constraint firstAttribute="height" constant="46" id="YUV-b5-p7p"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="36"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH4-81-ji4">
+                    <rect key="frame" x="34" y="277" width="532" height="46"/>
+                    <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="6lY-QZ-6La"/>
-                            <exclude reference="YUV-b5-p7p"/>
-                        </mask>
-                    </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6u-oE-mxR">
-                    <rect key="frame" x="265" y="333" width="70" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="-Author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6u-oE-mxR">
+                    <rect key="frame" x="34" y="331" width="532" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="2SQ-mq-hCz" secondAttribute="bottom" id="7r2-hO-f1o"/>
-                <constraint firstItem="qH4-81-ji4" firstAttribute="centerY" secondItem="2SQ-mq-hCz" secondAttribute="centerY" id="8Pl-C4-vfL"/>
-                <constraint firstAttribute="trailing" secondItem="2SQ-mq-hCz" secondAttribute="trailing" id="IR2-FX-DAJ"/>
-                <constraint firstItem="qH4-81-ji4" firstAttribute="centerX" secondItem="2SQ-mq-hCz" secondAttribute="centerX" id="Kmd-Tj-fbP"/>
-                <constraint firstItem="e6u-oE-mxR" firstAttribute="top" secondItem="qH4-81-ji4" secondAttribute="bottom" constant="5" id="OJt-sD-vff"/>
-                <constraint firstItem="2SQ-mq-hCz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TXv-vt-yT0"/>
-                <constraint firstItem="e6u-oE-mxR" firstAttribute="centerX" secondItem="2SQ-mq-hCz" secondAttribute="centerX" id="bg0-vY-HBb"/>
-                <constraint firstItem="2SQ-mq-hCz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oCO-ID-wjd"/>
+                <constraint firstAttribute="trailing" secondItem="e6u-oE-mxR" secondAttribute="trailing" constant="34" id="1rw-aC-MXU"/>
+                <constraint firstItem="e6u-oE-mxR" firstAttribute="top" secondItem="qH4-81-ji4" secondAttribute="bottom" constant="8" id="DrH-Bz-KqP"/>
+                <constraint firstAttribute="bottom" secondItem="2SQ-mq-hCz" secondAttribute="bottom" id="MZg-GX-OYX"/>
+                <constraint firstItem="qH4-81-ji4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nm7-8G-QqG"/>
+                <constraint firstAttribute="trailing" secondItem="2SQ-mq-hCz" secondAttribute="trailing" id="VnC-QN-49H"/>
+                <constraint firstItem="2SQ-mq-hCz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fqH-hg-zTR"/>
+                <constraint firstItem="qH4-81-ji4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="34" id="mwF-iD-sJ4"/>
+                <constraint firstItem="qH4-81-ji4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nfe-IS-rqD"/>
+                <constraint firstAttribute="trailing" secondItem="qH4-81-ji4" secondAttribute="trailing" constant="34" id="ppL-yT-CKM"/>
+                <constraint firstItem="e6u-oE-mxR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="34" id="r7o-AX-zBM"/>
+                <constraint firstItem="2SQ-mq-hCz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ucZ-C8-idV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="authorLabel" destination="e6u-oE-mxR" id="vSX-3J-2u7"/>
+                <outlet property="imageView" destination="2SQ-mq-hCz" id="Gm2-5s-dgp"/>
+                <outlet property="quoteLabel" destination="qH4-81-ji4" id="Qgb-YI-F9D"/>
+            </connections>
         </view>
     </objects>
 </document>

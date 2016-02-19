@@ -12,6 +12,7 @@ class QuoteTableViewCell: UITableViewCell {
 
     @IBOutlet var quoteLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
+    @IBOutlet var quoteImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

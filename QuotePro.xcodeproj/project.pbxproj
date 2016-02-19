@@ -77,16 +77,14 @@
 			isa = PBXGroup;
 			children = (
 				2E0A71B11C74E6C200B7F144 /* AppDelegate.swift */,
+				2E5DC5FB1C77D53600A7DB5C /* ViewControllers */,
 				2E631DED1C755D6200CE64CE /* DataManager.swift */,
-				2E0A71B61C74E6C200B7F144 /* MasterViewController.swift */,
 				2E631E0D1C766D4500CE64CE /* QuoteTableViewCell.swift */,
-				2E0A71C81C74ED0700B7F144 /* QuoteBuilderViewController.swift */,
-				2E0A71B81C74E6C200B7F144 /* DetailViewController.swift */,
 				2E0A71DA1C75020C00B7F144 /* QuoteWebService.swift */,
 				2E0A71D81C7501F600B7F144 /* PhotoWebService.swift */,
-				2E0A71CA1C74EE3400B7F144 /* QuoteView.swift */,
 				2E631DE91C7551F700CE64CE /* Quote+CoreDataProperties.swift */,
 				2E631DEA1C7551F700CE64CE /* Quote.swift */,
+				2E0A71CA1C74EE3400B7F144 /* QuoteView.swift */,
 				2E0A71CC1C74EE4F00B7F144 /* QuoteView.xib */,
 				2E631E0F1C76728000CE64CE /* Main.storyboard */,
 				2E0A71BD1C74E6C200B7F144 /* Assets.xcassets */,
@@ -95,6 +93,16 @@
 				2E0A71B31C74E6C200B7F144 /* QuotePro.xcdatamodeld */,
 			);
 			path = QuotePro;
+			sourceTree = "<group>";
+		};
+		2E5DC5FB1C77D53600A7DB5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E0A71B61C74E6C200B7F144 /* MasterViewController.swift */,
+				2E0A71C81C74ED0700B7F144 /* QuoteBuilderViewController.swift */,
+				2E0A71B81C74E6C200B7F144 /* DetailViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

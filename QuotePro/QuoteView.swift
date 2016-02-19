@@ -23,9 +23,10 @@ class QuoteView: UIView {
         self.authorLabel.text = author
     }
     
-    class func getPresetQuoteAuthorAndPhoto(presetQuote: String, presetAuthor: String, presetPhotoURL: String, onComplete: ((QuoteView) -> Void)) {
+    class func getPresetQuoteAuthorAndPhoto(presetQuote: String, presetAuthor: String, presetPhotoURL: String, frameSize: CGSize, onComplete: ((QuoteView) -> Void)) {
         let view = NSBundle.mainBundle().loadNibNamed("QuoteView", owner: nil, options: nil).first! as! QuoteView
-
+        view.frame.size.width = frameSize.width
+        view.frame.size.height = frameSize.width
         view.setLabel(presetQuote, author: presetAuthor)
         
         PhotoWebService.sharedLoader.imageForUrl("\(presetPhotoURL)", completionHandler:{(image: UIImage?, url: String) in

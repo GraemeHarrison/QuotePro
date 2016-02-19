@@ -81,7 +81,7 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! QuoteTableViewCell
         let quoteObject = objects[indexPath.row] as! Quote
-        QuoteView.getPresetQuoteAuthorAndPhoto(quoteObject.quote!, presetAuthor: quoteObject.author!, presetPhotoURL: quoteObject.photoURL!, onComplete: {(quoteView) in
+        QuoteView.getPresetQuoteAuthorAndPhoto(quoteObject.quote!, presetAuthor: quoteObject.author!, presetPhotoURL: quoteObject.photoURL!, frameSize: self.view.frame.size, onComplete: {(quoteView) in
             let image = self.snapshot(quoteView)
             self.share(image)
         })
@@ -93,6 +93,11 @@ class MasterViewController: UITableViewController {
         let quoteObject = objects[indexPath.row] as! Quote
         cell.quoteLabel.text = quoteObject.quote
         cell.authorLabel.text = quoteObject.author
+        
+        QuoteView.getPresetQuoteAuthorAndPhoto(quoteObject.quote!, presetAuthor: quoteObject.author!, presetPhotoURL: quoteObject.photoURL!, frameSize: self.view.frame.size, onComplete: {(quoteView) in
+            cell.quoteImageView.image = self.snapshot(quoteView)
+        })
+        
         return cell
     }
     
